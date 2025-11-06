@@ -11,3 +11,8 @@ services:
       MYSQL_DATABASE: "testdb"
       MYSQL_USER: "testuser"
       MYSQL_PASSWORD: "testpw"
+  wordpress:
+    image: "wordpress-datascientest"
+    build: ./wordpress
+    ports:
+        - 80:80
