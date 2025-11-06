@@ -1,0 +1,13 @@
+services:
+  mariadb:
+    image: "mariadb"
+    restart: 'always'
+    volumes:
+      - "/var/lib/mysql/data:/home/ubuntu/.datasql"
+      - "/var/lib/mysql/logs:/home/ubuntu/.logssql"
+      - /var/docker/mariadb/conf:/etc/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: "testrootpw"
+      MYSQL_DATABASE: "testdb"
+      MYSQL_USER: "testuser"
+      MYSQL_PASSWORD: "testpw"
