@@ -8,11 +8,11 @@ services:
       - /var/docker/mariadb/conf:/etc/mysql
     environment:
       MYSQL_ROOT_PASSWORD: "testrootpw"
-      MYSQL_DATABASE: "testdb"
+      MYSQL_DATABASE: "wordpress"
       MYSQL_USER: "testuser"
       MYSQL_PASSWORD: "testpw"
   wordpress:
     image: "wordpress-datascientest"
     build: ./wordpress
     ports:
-        - 80:80
+        - 8001:80
