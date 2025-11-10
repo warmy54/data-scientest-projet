@@ -15,4 +15,4 @@ services:
     image: "wordpress-datascientest"
     build: ./wordpress
     ports:
-        - 8030:80
+        - 80:80

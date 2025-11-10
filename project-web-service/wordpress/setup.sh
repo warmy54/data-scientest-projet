@@ -12,7 +12,7 @@ mv wordpress /var/www/html/wordpress/
 sed -i -e 's/database_name_here/wordpress/g' /var/www/html/wordpress/wp-config-sample.php
 sed -i -e 's/username_here/testuser/g' /var/www/html/wordpress/wp-config-sample.php
 sed -i -e 's/password_here/testpw/g' /var/www/html/wordpress/wp-config-sample.php
-sed -i -e 's/localhost/wordpress/g' /var/www/html/wordpress/wp-config-sample.php
+sed -i -e 's/localhost/mariadb/g' /var/www/html/wordpress/wp-config-sample.php
 mv /var/www/html/wordpress/wp-config-sample.php /var/www/html/wordpress/wp-config.php
 
 chown -R www-data:www-data /var/www/html/wordpress
