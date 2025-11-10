@@ -16,3 +16,7 @@ services:
     build: ./wordpress
     ports:
         - 80:80
+    depends_on:
+      db:
+        condition: service_healthy
+        restart: true
